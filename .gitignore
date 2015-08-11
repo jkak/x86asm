@@ -1,0 +1,8 @@
+# masm
+*.obj
+*.OBJ
+*.EXE
+
+# bochs
+*.bin
+*.img
