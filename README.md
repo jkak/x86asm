@@ -72,40 +72,13 @@ bochs
 
 此脚本，第九章也可以使用。
 
+## 附图
 
-## 第十三章编译过程
-
-## 运行脚本
-```bash
-
-# nasm to bin
-
-## mbr
-nasm -f bin c13/c13_mbr.asm  -o c.bin
-
-# core
-nasm -f bin c13/c13_core.asm  -o core.bin
-
-# user
-nasm -f bin c13/c13.asm  -o user.bin
+从第十一章开始，各章程序越来越长，虽然书上已经有详细说明，以及部分配图。
+但还是不易看懂。故每章都有彩色配图。即给出内存结构，也给出相应的数据结构。
+以方便读懂程序。比较图可以更直观的获得最整体的印象和思路。
 
 
-# dd to c.img
-
-## mbr
-dd if=c.bin    of=c.img bs=512 count=0 conv=notrunc
-
-## core
-dd if=core.bin of=c.img bs=512 count=10 seek=1  conv=notrunc
-
-## user
-dd if=user.bin of=c.img bs=512 count=10 seek=50  conv=notrunc
-
-## disk data
-dd if=./c13/diskdata.txt of=c.img bs=512 count=10 seek=100  conv=notrunc
-
-bochs
-
-```
+为避免首页文档大量图片。相关附图均放在各章目录下。
 
 
