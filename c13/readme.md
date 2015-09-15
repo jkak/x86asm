@@ -3,6 +3,8 @@
 
 ### 运行脚本
 
+执行如下命令，或者在本目录下执行run.sh脚本。
+
 ```bash
 
 # nasm to bin
@@ -20,7 +22,7 @@ nasm -f bin c13/c13.asm  -o user.bin
 # dd to c.img
 
 ## mbr
-dd if=c.bin    of=c.img bs=512 count=0 conv=notrunc
+dd if=c.bin    of=c.img bs=512 count=1 conv=notrunc
 
 ## core
 dd if=core.bin of=c.img bs=512 count=10 seek=1  conv=notrunc
