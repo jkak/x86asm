@@ -36,3 +36,28 @@ bochs
 
 ```
 
+### 附图
+
+本章附图由于太大，分为3部分。另外，本章的程序和前一章整体是相似的，
+只是在部分细节上有所改变。但这也更新了程序的流程图。
+主要包括核心程序调用用户程序的方式，以及用户程序本身只输出，未再读程序数据。
+
+#### 内存分布图。
+
+包括内存中的内核段及用户段，重点给出了GDT与LDT中的描述符项，TSS, TCB等数据结构核心程序与用户程序的头部数据结构。
+以及页目录和页表。
+
+![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c16/c16_1.png)
+
+#### 程序流程图
+
+省略了引导程序，重点给出了核心程序及用户程序的执行过程。并将内核的load_relocate_program函数的流程独立出来。
+
+![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c16/c16_2.png)
+
+
+#### 关于分页机制
+单独总结了分页机制的工作过程，以及程序中，使用内核页目录临时生成用户程序的页目录，及其复制过程的说明。
+
+![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c16/c16_table.png)
+
