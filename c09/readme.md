@@ -3,6 +3,23 @@
 
 本部分主要包括一张图，以及关于int3相关的讨论。
 
+## 执行程序9.1
+
+运行如下脚本显示时间：
+```bash
+cd x86asm 
+./user_bochs.sh c08/c08_mbr.asm  c09/c09_1.asm 
+```
+
+## 执行程序9.2
+
+运行如下脚本，测试键盘输入：
+```bash
+cd x86asm 
+./user_bochs.sh c08/c08_mbr.asm  c09/c09_2.asm 
+```
+
+
 ## 图1。
 
 包括中断和CMOS－RAM相关信息。以及程序流程图。

@@ -6,6 +6,8 @@
 
 程序的编译使用user_bochs.sh脚本。参考上级目录的README.MD文件。
 
+cd x86asm && ./user_bochs.sh c08/c08_mbr.asm  c08/c08.asm
+
 
 ### 图1。
 
