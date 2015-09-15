@@ -1,7 +1,9 @@
 
 ## 第14章 任务与特权级保护
 
+
 ### 运行脚本
+执行如下步骤，或者在x86asm目录执行 ./c14/run.sh脚本。
 
 ```bash
 
@@ -13,20 +15,20 @@ nasm -f bin c13/c13_mbr.asm  -o c.bin
 # core
 nasm -f bin c14/c14_core.asm  -o core.bin
 
-# user
+# program of user, use c13/c13.asm
 nasm -f bin c13/c13.asm  -o user.bin
 
 
 # dd to c.img
 
 ## mbr
-dd if=c.bin    of=c.img bs=512 count=0 conv=notrunc
+dd if=c.bin    of=c.img bs=512 count=1 conv=notrunc
 
 ## core
-dd if=core.bin of=c.img bs=512 count=10 seek=1  conv=notrunc
+dd if=core.bin of=c.img bs=512 count=49 seek=1  conv=notrunc
 
 ## user
-dd if=user.bin of=c.img bs=512 count=10 seek=50  conv=notrunc
+dd if=user.bin of=c.img bs=512 count=50 seek=50  conv=notrunc
 
 ## disk data
 dd if=./c13/diskdata.txt of=c.img bs=512 count=10 seek=100  conv=notrunc
