@@ -1,6 +1,8 @@
 
 ## 第15章 任务切换
 
+运行如下步骤，或者直接在x86asm目录下执行./c15/run.sh。
+
 ### 运行脚本
 
 ```bash
@@ -14,7 +16,7 @@ nasm -f bin c13/c13_mbr.asm  -o c.bin
 nasm -f bin c15/c15_core.asm  -o core.bin
 
 # user
-nasm -f bin c13/c13.asm  -o user.bin
+nasm -f bin c15/c15.asm  -o user.bin
 
 
 # dd to c.img
@@ -23,13 +25,11 @@ nasm -f bin c13/c13.asm  -o user.bin
 dd if=c.bin    of=c.img bs=512 count=0 conv=notrunc
 
 ## core
-dd if=core.bin of=c.img bs=512 count=10 seek=1  conv=notrunc
+dd if=core.bin of=c.img bs=512 count=49 seek=1  conv=notrunc
 
 ## user
-dd if=user.bin of=c.img bs=512 count=10 seek=50  conv=notrunc
+dd if=user.bin of=c.img bs=512 count=50 seek=50  conv=notrunc
 
-## disk data
-# dd if=./c13/diskdata.txt of=c.img bs=512 count=10 seek=100  conv=notrunc
 
 bochs
 
