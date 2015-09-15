@@ -54,3 +54,8 @@ bochs
 
 ![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c14/c14_2.png)
 
+#### 关于RPL的讨论
+最后是关于RPL相关的讨论。
+
+![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c14/c14_RPL.png)
+
