@@ -1,0 +1,53 @@
+
+h|help      - show list of debugger commands
+h|help CMD  - show short command description
+
+
+-*- Debugger control -*-
+    help, q|quit|exit, set, instrument, show, trace, trace-reg,
+    trace-mem, u|disasm, ldsym, slist
+
+        u/NUM [ADDR]    un-assembly	反汇编代码
+
+-*- Execution control -*-
+    c|cont|continue, s|step, p|n|next, modebp, vmexitbp
+
+        n       next    执行完当前循环后暂停，如（rep movsb, loop）
+
+-*- Breakpoint management -*-
+    vb|vbreak, lb|lbreak, pb|pbreak|b|break, sb, sba, blist,
+    bpe, bpd, d|del|delete, watch, unwatch
+
+        b ADDR      break           设置断点    
+        lb|lbreak <addr> - set a linear address instruction breakpoint
+
+
+-*- CPU and memory contents -*-
+    x, xp, setpmem, writemem, crc, info,
+    r|reg|regs|registers, fp|fpu, mmx, sse, sreg, dreg, creg,
+    page, set, ptime, print-stack, ?|calc
+
+    x  /nuf <addr> - examine memory at linear address
+    xp /nuf <addr> - examine memory at physical address
+
+    xp/NUM ADDR eXamine memory at Phisical addr. 显示指定内存地址的内容
+    xp/64 0x7e00
+
+    help info
+    info eflags	infomation	显示CPU相关信息
+    info gdt
+    info tab    show page table
+    info gdt [NUM] [NUM]
+
+    sreg        Segment Reg     显示段Reg
+            包含了段寄存器描述符高速缓存器。dh，dl各32位
+    dreg    show debug registers
+    creg    show control registers
+    
+    page <Linear Addr>
+
+
+-*- Working with bochs param tree -*-
+    show "param", restore
+
+
