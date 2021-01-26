@@ -47,6 +47,6 @@ CPU与内存分布图。增加了核心程序与用户程序的头部数据结�
 程序流程图，包括了引导程序，核心程序及用户程序的执行过程。
 
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c13/c13.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c13/c13.png)
 
 

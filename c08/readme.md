@@ -14,7 +14,7 @@ cd x86asm && ./user_bochs.sh c08/c08_mbr.asm  c08/c08.asm
 包括CPU关键寄存器与南桥主要接口。并整理了CPU的端口读写方式，以及磁盘接口的端口。
 并给出了加载程序与用户程序的头部接口。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c08/c8_1.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c08/c8_1.png)
 
 ### 图2。
 
@@ -22,5 +22,5 @@ cd x86asm && ./user_bochs.sh c08/c08_mbr.asm  c08/c08.asm
 
 二是用户程序的执行流程。内部通过retf实现了代码段的转移。put_char子程序参考教材。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c08/c8_2.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c08/c8_2.png)
 

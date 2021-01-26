@@ -46,16 +46,16 @@ bochs
 
 包括CPU关键寄存器，内存中的内核段及用户段，重点给出了GDT与LDT中的描述符项，保留了核心程序与用户程序的头部数据结构。并增加了用户程序的TCB结构和TSS结构。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c14/c14_1.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c14/c14_1.png)
 
 #### 程序流程图
 
 包括了引导程序，核心程序及用户程序的执行过程。并将内核的load_relocate_program函数的流程独立出来。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c14/c14_2.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c14/c14_2.png)
 
 #### 关于RPL的讨论
 最后是关于RPL相关的讨论。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c14/c14_RPL.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c14/c14_RPL.png)
 

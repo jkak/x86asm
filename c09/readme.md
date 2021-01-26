@@ -24,7 +24,7 @@ cd x86asm
 
 包括中断和CMOS－RAM相关信息。以及程序流程图。
 
-![protect_mode](https://github.com/jungle85gopy/x86asm/blob/master/c09/c9.png)
+![protect_mode](https://github.com/jkak/x86asm/blob/master/c09/c9.png)
 
 
 ## 关于int3与int 3中断
